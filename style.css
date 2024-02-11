@@ -1,0 +1,341 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Poppins, sans-serif;
+}
+body {
+    background: lightblue;
+}
+:root {
+    --primary-color: #003147;
+    --secondary-color: #03a9f4;
+}
+.container {
+    max-width: 1000px;
+    margin: 50px auto ;   /* Centré*/
+    display: flex;
+    justify-content: center;
+    transition: box-shadow 0.4 ease;
+    box-shadow: 0 35px 55px rgba(0, 0, 0,0.25)
+}
+
+.left_side{
+    background: var(--primary-color);
+    color: white;
+    padding: 40px;
+}
+.right_side {
+    background-color: white;
+}
+ul li i, .education li h4, .percent {
+    color: var(--secondary-color);
+}
+.languages .percent_container {
+    background: #081921;
+    height: 6px;
+    margin: 5px auto;
+}
+.languages .percent {
+    background: var(--secondary-color);
+    height: 6px;
+   
+}
+nav {
+    visibility: hidden;
+    color: black;
+}
+ul li  {
+    list-style-type: none;
+    font-size: 16px;
+    font-weight: 400;
+}
+.left_side hr {
+    border-color:#0a0a55; 
+}
+.about_me img {
+    border-radius: 50%;
+    height: 200px;
+    width:200;
+    /* margin-bottom: 20px; */
+}
+.about_me {
+    text-align: center;
+}
+.right_side {
+    padding: 40px;
+}
+.experience .box {
+    display: flex;
+    justify-content: center;
+    padding: 25px 0;
+
+}
+.experience .year_company {
+    min-width: 150px;
+    margin-right: 35px;
+}
+.skill  {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    align-items: center;
+  
+}
+.skill .percent {
+    background: var(--secondary-color);
+    height: 10px;
+}
+.skill .percent_container {
+    background: #aeaeaf;
+    height: 10px;
+       
+}
+.interests ul {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+.year_company h4, .year_company h5 {
+    color: #848c90;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+.box .content h4 {
+    color: #3498db;
+    font-size: 20px;
+    margin: 3px;
+    text-transform: uppercase;
+}
+.right_side p {
+    color: #333;
+}
+.right_side h2 {
+    padding: 25px 0;
+    color: var(--primary-color);
+    font-size: 30px;
+}
+.fa-solid {
+    font-size: 19px;
+}
+.contact_info ul li {
+    display: flex;
+    gap: 10px;
+    margin: 10px 0;
+}
+.about_me h2 {
+    text-transform: uppercase;
+    margin-top: 40px;
+    font-weight: 600;
+
+}
+.about_me h3 {
+    font-weight: 300;
+    font-size: 16px;
+    padding-bottom: 20px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+.left_side .title {
+    text-transform: uppercase;
+    padding: 15px 0;
+    letter-spacing: 1px;
+    font-size: 26px;
+    font-weight: 600;
+}
+.education li {
+    padding-bottom: 14px;
+}
+ li h5 {
+    font-size: 13px;
+    font-weight: 200;
+}
+.degree  {
+    size: 20px;
+    font-weight: 700;
+}
+.left_side li i {
+    margin-right: 6px;
+    
+}
+.text {
+    cursor: pointer;
+}
+.contact_info .text:hover {
+    cursor: pointer;
+    transform: translateX(3px);
+}
+.container:hover {
+    transform: translate(5px, -3px);
+    box-shadow: 0 8px 16px 16px rgba(0, 0, 0, 0.2);
+}
+@media screen and (max-width: 800px){
+    .container {
+        margin: 40px 100px;
+        display: flex;
+        justify-content: center;
+        
+    }
+    nav {
+        visibility: visible;
+        display: flex;
+    }
+    .V-mobile ul {
+        display: flex;
+        justify-content: space-between;
+    }
+    .interests {
+        flex-basis: 100%;
+        display: grid;
+        grid-template-columns: 1fr ;      /*espace enter les elementes des inteerst*/  /* fazet l grid mte3 proffesional skills*/ 
+        justify-content: center;  
+        gap: 10px;  
+    }
+    .experience .box  {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .skill {
+        display: grid;
+        grid-template-columns: 150px 1fr;
+        align-items: center;
+       
+    }
+}
+@media screen and (max-width: 600px){
+    .container {
+        margin: 40px 100px;
+        display: flex;
+        justify-content: center;
+        
+    }
+    .interests {
+        flex-basis: 100%;
+        display: grid;
+        grid-template-columns: 1fr ;      /*espace enter les elementes des inteerst*/  /* fazet l grid mte3 proffesional skills*/ 
+        justify-content: center;  
+        gap: 10px;  
+    }
+    .experience .box  {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .skill {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+       
+    }
+    .skill h4 {
+color: #848c99;
+    }
+}
+
+.about_me {
+    animation-name: aboutme;
+    animation-duration: 4s;
+}
+@keyframes aboutme{
+    from {
+        opacity: 0;
+    }to {
+    opacity: 1;
+}
+}
+.interests ul i {
+    animation-name: rotateIcon;
+    animation-duration: 3s;
+}
+.interests ul i:hover{
+    transform: rotate(45deg);
+}
+@keyframes rotateIcon {
+    from {
+        transform: rotate(0deg);
+    }to {
+        transform: rotate(45deg);
+    }
+}
+#Sanimation-1 {
+    animation: anim-1 1.5s;
+}
+@keyframes anim-1 {
+    from{
+        width: 0%;
+    } to {
+        width: 95%;
+    }
+}
+#Sanimation-2 {
+    animation: anim-2 1.75s;
+}
+@keyframes anim-2 {
+    from{
+        width: 0%;
+    } to {
+        width: 80%;
+    }
+}
+#Sanimation-3 {
+    animation: anim-3 2s;
+}
+@keyframes anim-3 {
+    from{
+        width: 0%;
+    } to {
+        width: 70%;
+    }
+}
+#Sanimation-4 {
+    animation: anim-4 2.25s;
+}
+@keyframes anim-4 {
+    from{
+        width: 0%;
+    } to {
+        width: 73%;
+    }
+}
+#Sanimation-5 {
+    animation: anim-5 2.5s;
+}
+@keyframes anim-5 {
+    from{
+        width: 0%;
+    } to {
+        width: 95%;
+    }
+}
+#Lanimation- {
+    animation: Lanim-1 1.5s;
+}
+@keyframes Lanim-1 {
+    from{
+        width: 0%;
+    } to {
+        width: 80%;
+    }
+}
+#Lanimation-2 {
+    animation: Lanim-2 1.75s;
+}
+@keyframes Lanim-2 {
+    from{
+        width: 0%;
+    } to {
+        width: 48%;
+    }
+}
+#Lanimation-3 {
+    animation: Lanim-3 2s;
+}
+@keyframes Lanim-3 {
+    from{
+        width: 0%;
+    } to {
+        width: 90%;
+    }
+}
